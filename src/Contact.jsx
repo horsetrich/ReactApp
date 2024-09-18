@@ -21,7 +21,7 @@ const Contact = () => {
     };
 
     return (
-        <div>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -100%)' }}>
             <h1>Contact Me</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="firstName"
@@ -40,6 +40,7 @@ const Contact = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange} />
+                <input type="submit" value="Send" onSubmit={handleSubmit} /> 
             </form>
         </div>
     );
